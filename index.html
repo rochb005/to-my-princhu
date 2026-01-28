@@ -149,14 +149,11 @@
             const mainGif = document.getElementById('main-gif');
             const contentWrapper = document.getElementById('content-wrapper');
 
-            if (noCount < 3) {
+            if (noCount === 1) {
                 paddingVal += 20; 
                 fontSizeVal += 0.4;
                 yesBtn.style.padding = `${paddingVal}px ${paddingVal * 1.6}px`;
-                yesBtn.style.fontSize = `${fontSizeVal}rem`;
-            } 
-            else if (noCount === 3) {
-                // Swap the GIF source BEFORE hiding the content to ensure it's ready
+                yesBtn.style.fontSize = `${fontSizeVal}rem`;// Swap the GIF source BEFORE hiding the content to ensure it's ready
                 mainGif.src = "gif2.gif";
                 contentWrapper.style.display = 'none';
 
@@ -191,4 +188,5 @@
         }
     </script>
 </body>
+
 </html>
